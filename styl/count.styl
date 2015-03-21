@@ -1,27 +1,29 @@
 button-color = #9D3D34
 border-color = darken(button-color, 10)
 
-text-shadow(w, c, k)
+long-shadow(w, c)
   tmp = ''
   for _w in (1..w)
     tmp += 1px*_w 1px*_w c
-    c = rgba(c, k*alpha(c))
     if _w < w
       tmp += ', '
   text-shadow unquote(tmp)
 
-h1#count
-  color           #fff
-  background      button-color
-  border          solid 5px border-color
-  padding         40px
-  font-size       5em
-  border-radius   5px
-  user-select     none
-  cursor          pointer
-  // opacity         .9
-  transition      all .2s ease-out
-  text-shadow(30px, border-color, 0.85)
+h1.counter
+  background       button-color
+  border           solid 5px border-color
+  border-radius    15px
+  color            #fff
+  cursor           pointer
+  flex-grow        1
+  font-size        5em
+  margin           10px
+  overflow         hidden
+  padding          40px
+  text-align       center
+  transition       all .3s
+  user-select      none
 
-// h1#count:hover
-//   opacity         1
+h1.counter:hover
+  flex-grow        3
+  long-shadow      120px border-color
