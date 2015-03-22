@@ -1,13 +1,7 @@
-h1.counter 1
-h1.counter 1
-h1.counter 1
-h1.counter 1
-h1.counter 1
-h1.counter 1
-h1.counter 1
-h1.counter 1
-h1.counter 1
-h1.counter 1
-h1.counter 1
-h1.counter 1
+- function rand(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+- var n = 0
+while n++ < 17
+  - var k = rand(0,100)
+  h1.counter= k
+
 script(src="main.js")
