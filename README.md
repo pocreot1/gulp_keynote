@@ -1,5 +1,6 @@
 Gulp.js keynote
 ======
+###[Keynote](http://www.slideshare.net/i_rapkin/gulpjs-46144896)
 ###[Demo](http://rapkin.com.ua/gulp_key)
 
 Demonstration of task-runner [Gulp.js](http://gulpjs.com/).
