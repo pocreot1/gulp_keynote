@@ -5,6 +5,7 @@ connect       = require 'gulp-connect'
 gulp          = require 'gulp'
 jade          = require 'gulp-jade'
 livereload    = require 'gulp-livereload'
+plumber       = require 'gulp-plumber'
 stylus        = require 'gulp-stylus'
 
 gulp.task 'default', ['coffee', 'jade', 'stylus', 'connect', 'watch']
@@ -23,6 +24,7 @@ gulp.task 'watch', ->
 
 gulp.task 'coffee', ->
   gulp.src 'coffee/*.coffee'
+    .pipe plumber()
     .pipe coffee()
     .pipe concat 'main.js'
     .pipe gulp.dest 'dist'
@@ -30,6 +32,7 @@ gulp.task 'coffee', ->
 
 gulp.task 'stylus', ->
   gulp.src 'styl/main.styl'
+    .pipe plumber()
     .pipe stylus()
     .pipe autoprefixer()
     .pipe gulp.dest 'dist'
@@ -37,6 +40,7 @@ gulp.task 'stylus', ->
 
 gulp.task 'jade', ->
   gulp.src 'jade/index.jade'
+    .pipe plumber()
     .pipe jade(pretty: true)
     .pipe gulp.dest 'dist'
     .pipe livereload()
