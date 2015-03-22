@@ -4,7 +4,7 @@
 
 function detectBrowser()
 {
-	/*
+	
     var fallback = true;
     
     if (navigator && navigator.vendor) {
@@ -25,7 +25,7 @@ function detectBrowser()
     else {
         window.location.replace( cropped + "assets/player/KeynoteDHTMLPlayer.html" );
     }
-    */
+    
     var slashIndex = window.location.href.lastIndexOf("/");
     var cropped = window.location.href.slice(0,slashIndex+1);
     
@@ -35,7 +35,7 @@ function detectBrowser()
 
 </script>
 
-<body bgcolor="black" onload="detectBrowser()">
+<body bgcolor="white" onload="detectBrowser()">
 </body>
 
 </html>
