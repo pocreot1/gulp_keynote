@@ -13,6 +13,14 @@
   ],
   "author": "rapkin",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rapkin/gulp_keynote.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rapkin/gulp_keynote/issues"
+  },
+  "homepage": "https://github.com/rapkin/gulp_keynote",
   "devDependencies": {
     "coffee-script": "^1.9.1",
     "gulp": "^3.8.11",
